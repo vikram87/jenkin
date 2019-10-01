@@ -1,4 +1,5 @@
-node {
+pipeline {
+agent any
 
 def mvnHome
 stage ('prepare') {
