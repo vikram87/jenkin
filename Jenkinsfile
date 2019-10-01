@@ -7,6 +7,6 @@ mvnHome = tool 'maven'
 }
 
 stage ('build') {
-sh "'${mvnHome}/bin/mvn' clean compile"
+sh "'${mvnHome}/bin/mvn' clean build"
 }
 }
