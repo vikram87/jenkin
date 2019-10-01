@@ -2,7 +2,7 @@ node {
 
 def mvnHome
 stage ('prepare') {
-git 'git@https://github.com/vikram87/jenkin.git'
+git 'git@github.com/vikram87/jenkin.git'
 mvnHome = tool 'maven'
 }
 
