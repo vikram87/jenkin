@@ -1,12 +1,12 @@
-pipeline {
-agent any
+node {
 
+def mvnHome
+stage ('prepare') {
+git 'git@https://github.com/vikram87/jenkin.git'
+mvnHome = tool 'maven'
+}
 
 stage ('build') {
-steps { 
-	withMaven(maven : 'maven') {
-sh 'mvn clean compile'
-}
-}
+sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
 }
 }
