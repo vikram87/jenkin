@@ -7,6 +7,6 @@ mvnHome = tool 'maven'
 }
 
 stage ('build') {
-sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
+sh "'${mvnHome}/bin/mvn' clean compile"
 }
 }
