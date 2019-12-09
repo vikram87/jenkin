@@ -15,6 +15,9 @@ sh "./configure.sh"
 stage ('Install') {
 sh "./tomcat.sh"
 }
+stage ('build') {
+sh "'${mvnHome}/bin/mvn' clean package"
+}
 stage ('Deploy') {
 sh "./copy.sh"
 }
