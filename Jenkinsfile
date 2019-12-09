@@ -9,6 +9,9 @@ mvnHome = tool 'maven'
 stage ('create') {
 sh "./ansible.sh"
 }
+stage ('build') {
+sh "'${mvnHome}/bin/mvn' package"
+}
 stage ('configure') {
 sh "./configure.sh"
 }
