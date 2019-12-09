@@ -7,7 +7,7 @@
       set_java: jre-1.8.0-openjdk
       req_tomcat_version: 9.0.29
       tomcat_url: http://mirrors.estointernet.in/apache/tomcat/tomcat-{{req_tomcat_version.split('.')[0]}}/v{{req_tomcat_version}}/bin/apache-tomcat-{{req_tomcat_version}}.tar.gz
-      become: yes
+    become: true 
     tasks:
       - name: Update all packages to the latest version
         yum:
