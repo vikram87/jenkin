@@ -8,8 +8,8 @@
     vars:
       instance_type: t2.micro
       security_group: webservers
-      image: ami-0a74bfeb190bd404f
-      region: ap-south-1 
+      image: ami-0520e698dd500b1d1 
+      region: us-east-2 
       count: 1
 
     tasks:
