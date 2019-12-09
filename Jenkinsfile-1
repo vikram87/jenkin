@@ -6,12 +6,8 @@ git 'git@github.com:vikram87/jenkin.git'
 mvnHome = tool 'maven'
 }
 
-stage ('Install') {
-sh "./tomcat.sh"
-}
-
 stage ('build') {
-sh "'${mvnHome}/bin/mvn' clean package"
+sh "'${mvnHome}/bin/mvn' package"
 }
 
 stage ('Install') {
