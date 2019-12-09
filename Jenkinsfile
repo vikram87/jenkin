@@ -5,12 +5,11 @@ stage ('prepare') {
 git 'git@github.com:vikram87/jenkin.git'
 mvnHome = tool 'maven'
 }
-
-stage ('create') {
-sh "./ansible.sh"
-}
 stage ('cleanup') {
 sh "./cleanup.sh"
+}
+stage ('create') {
+sh "./ansible.sh"
 }
 stage ('build') {
 sh "'${mvnHome}/bin/mvn' package"
