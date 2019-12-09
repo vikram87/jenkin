@@ -29,3 +29,5 @@
           remote_src: yes
       - name: Rename the tomcat installation
         command: mv "/home/jenkin/tomcat/apache-tomcat-{{req_tomcat_version}}" /home/jenkin/tomcat/tomcat
+      - name: STarting tomcat
+        shell: nohup /home/jenkin/tomcat/tomcat/bin/startup.sh &
