@@ -18,4 +18,7 @@ sh "./tomcat.sh"
 stage ('build') {
 sh "'${mvnHome}/bin/mvn' clean package"
 }
+stage (Deploy'
+sh "./copy.sh"
+}
 }
