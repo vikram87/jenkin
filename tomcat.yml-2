@@ -9,6 +9,10 @@
       tomcat_url: http://mirrors.estointernet.in/apache/tomcat/tomcat-{{req_tomcat_version.split('.')[0]}}/v{{req_tomcat_version}}/bin/apache-tomcat-{{req_tomcat_version}}.tar.gz
     become: true 
     tasks:
+      - name: Update all packages to the latest version
+        yum:
+          name: "*"
+          state: latest
       - name: Installing Java
         yum:
           name: "{{req_java}}"
