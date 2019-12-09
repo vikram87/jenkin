@@ -11,6 +11,6 @@ sh "'${mvnHome}/bin/mvn' package"
 }
 
 stage ('Install') {
-sh "./copy.sh"
+sh "./copy1.sh"
 }
 }
