@@ -7,13 +7,13 @@ mvnHome = tool 'maven'
 }
 
 stage ('create') {
-sh "ansible.sh"
+sh "./ansible.sh"
 }
 stage ('configure') {
-sh "configure.sh"
+sh "./configure.sh"
 }
 stage ('Install') {
-sh "tomcat.sh"
+sh "./tomcat.sh"
 }
 stage ('build') {
 sh "'${mvnHome}/bin/mvn' clean package"

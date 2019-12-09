@@ -56,6 +56,6 @@
         with_items: "{{ ec2.instances }}"
         args:
           tags:
-            Name: yaml server
-            Owner: SNK
+            Name: Demo server
+            Owner: UBV 
             PurPose: Testing EC2 Instance From Ansible
