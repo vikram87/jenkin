@@ -25,15 +25,13 @@
       - name: Download Tomcat
         get_url:
           url: "{{tomcat_url}}"
-          dest: /home/ec2-user/tomcat/
+          dest: /home/jenkin/tomcat/
       - name: extract the binaries
         unarchive:
-          src: "/home/ec2-user/tomcat/apache-tomcat-{{req_tomcat_version}}.tar.gz"
-          dest: /home/ec2-user/tomcat
+          src: "/home/jenkin/tomcat/apache-tomcat-{{req_tomcat_version}}.tar.gz"
+          dest: /home/jenkin/tomcat
           remote_src: yes
       - name: Rename the tomcat installation
-        command: mv "/home/ec2-user/tomcat/apache-tomcat-{{req_tomcat_version}}" /home/ec2-user/tomcat/tomcat
-      - name: replacing the port number
-        shell: /home/ansadmin/replace.sh
+        command: mv "/home/jenkin/tomcat/apache-tomcat-{{req_tomcat_version}}" /home/jenkin/tomcat/tomcat
       - name: STarting tomcat
-        shell: nohup /home/ec2-user/tomcat/tomcat/bin/startup.sh &
+        shell: nohup /home/jenkin/tomcat/tomcat/bin/startup.sh &
