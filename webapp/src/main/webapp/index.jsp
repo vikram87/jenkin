@@ -3,12 +3,8 @@
 <h3> This is a Demo pipeline for Infrastructure as a Code </h3>
 <h4> 
 
-Launches EC2
-COnfiguration change
-Installs latest Java
-Installs Tomcat
-Build war file
-Deploy the newly build war file
+This project launches EC2 and does Configuration change including Install latest Java, Installs Tomcat, Build war file and Deploys the newly build war file
+
 
 </h4>
 
